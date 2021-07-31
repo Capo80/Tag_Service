@@ -1,8 +1,8 @@
-cmd_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := gcc -Wp,-MMD,/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/.vtpmo.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/10/include  -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -include ./include/linux/compiler_types.h -D__KERNEL__ -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -DCONFIG_X86_X32_ABI -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=1024 -fstack-protector-strong -Wimplicit-fallthrough -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -fmacro-prefix-map=./= -Wno-packed-not-aligned  -DMODULE  -DKBUILD_BASENAME='"vtpmo"' -DKBUILD_MODNAME='"tag_service"' -c -o /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.c
+cmd_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/device.o := gcc -Wp,-MMD,/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/.device.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/10/include  -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -include ./include/linux/compiler_types.h -D__KERNEL__ -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -DCONFIG_X86_X32_ABI -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=1024 -fstack-protector-strong -Wimplicit-fallthrough -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -fmacro-prefix-map=./= -Wno-packed-not-aligned  -DMODULE  -DKBUILD_BASENAME='"device"' -DKBUILD_MODNAME='"tag_service"' -c -o /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/device.o /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/device.c
 
-source_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.c
+source_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/device.o := /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/device.c
 
-deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
+deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/device.o := \
   include/linux/kconfig.h \
     $(wildcard include/config/cc/version/text.h) \
     $(wildcard include/config/cpu/big/endian.h) \
@@ -17,29 +17,50 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/arm64.h) \
     $(wildcard include/config/retpoline.h) \
     $(wildcard include/config/arch/use/builtin/bswap.h) \
-  include/linux/module.h \
-    $(wildcard include/config/modules.h) \
+  /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/../include/device.h \
+  include/linux/fs.h \
+    $(wildcard include/config/read/only/thp/for/fs.h) \
     $(wildcard include/config/sysfs.h) \
-    $(wildcard include/config/modules/tree/lookup.h) \
-    $(wildcard include/config/livepatch.h) \
-    $(wildcard include/config/unused/symbols.h) \
-    $(wildcard include/config/module/sig.h) \
-    $(wildcard include/config/generic/bug.h) \
-    $(wildcard include/config/kallsyms.h) \
     $(wildcard include/config/smp.h) \
-    $(wildcard include/config/tracepoints.h) \
-    $(wildcard include/config/tree/srcu.h) \
-    $(wildcard include/config/bpf/events.h) \
-    $(wildcard include/config/jump/label.h) \
-    $(wildcard include/config/tracing.h) \
-    $(wildcard include/config/event/tracing.h) \
-    $(wildcard include/config/ftrace/mcount/record.h) \
-    $(wildcard include/config/kprobes.h) \
-    $(wildcard include/config/module/unload.h) \
-    $(wildcard include/config/constructors.h) \
-    $(wildcard include/config/function/error/injection.h) \
-  include/linux/list.h \
-    $(wildcard include/config/debug/list.h) \
+    $(wildcard include/config/fs/posix/acl.h) \
+    $(wildcard include/config/security.h) \
+    $(wildcard include/config/cgroup/writeback.h) \
+    $(wildcard include/config/ima.h) \
+    $(wildcard include/config/file/locking.h) \
+    $(wildcard include/config/fsnotify.h) \
+    $(wildcard include/config/fs/encryption.h) \
+    $(wildcard include/config/fs/verity.h) \
+    $(wildcard include/config/preemption.h) \
+    $(wildcard include/config/epoll.h) \
+    $(wildcard include/config/compat.h) \
+    $(wildcard include/config/mmu.h) \
+    $(wildcard include/config/quota.h) \
+    $(wildcard include/config/blk/dev/loop.h) \
+    $(wildcard include/config/fs/dax.h) \
+    $(wildcard include/config/block.h) \
+    $(wildcard include/config/mandatory/file/locking.h) \
+    $(wildcard include/config/debug/lock/alloc.h) \
+    $(wildcard include/config/migration.h) \
+    $(wildcard include/config/io/uring.h) \
+  include/linux/linkage.h \
+    $(wildcard include/config/arch/use/sym/annotations.h) \
+  include/linux/compiler_types.h \
+  include/linux/stringify.h \
+  include/linux/export.h \
+    $(wildcard include/config/modversions.h) \
+    $(wildcard include/config/module/rel/crcs.h) \
+    $(wildcard include/config/have/arch/prel32/relocations.h) \
+    $(wildcard include/config/modules.h) \
+    $(wildcard include/config/trim/unused/ksyms.h) \
+    $(wildcard include/config/unused/symbols.h) \
+  include/linux/compiler.h \
+    $(wildcard include/config/trace/branch/profiling.h) \
+    $(wildcard include/config/profile/all/branches.h) \
+    $(wildcard include/config/stack/validation.h) \
+    $(wildcard include/config/debug/entry.h) \
+  arch/x86/include/asm/barrier.h \
+    $(wildcard include/config/x86/32.h) \
+  arch/x86/include/asm/alternative.h \
   include/linux/types.h \
     $(wildcard include/config/have/uid16.h) \
     $(wildcard include/config/uid16.h) \
@@ -57,42 +78,9 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
   include/uapi/linux/posix_types.h \
   include/linux/stddef.h \
   include/uapi/linux/stddef.h \
-  include/linux/compiler_types.h \
   arch/x86/include/asm/posix_types.h \
-    $(wildcard include/config/x86/32.h) \
   arch/x86/include/uapi/asm/posix_types_64.h \
   include/uapi/asm-generic/posix_types.h \
-  include/linux/poison.h \
-    $(wildcard include/config/illegal/pointer/value.h) \
-    $(wildcard include/config/page/poisoning/zero.h) \
-  include/linux/const.h \
-  include/vdso/const.h \
-  include/uapi/linux/const.h \
-  include/linux/kernel.h \
-    $(wildcard include/config/preempt/voluntary.h) \
-    $(wildcard include/config/debug/atomic/sleep.h) \
-    $(wildcard include/config/preempt/rt.h) \
-    $(wildcard include/config/mmu.h) \
-    $(wildcard include/config/prove/locking.h) \
-    $(wildcard include/config/panic/timeout.h) \
-  include/linux/limits.h \
-  include/uapi/linux/limits.h \
-  include/vdso/limits.h \
-  include/linux/linkage.h \
-    $(wildcard include/config/arch/use/sym/annotations.h) \
-  include/linux/stringify.h \
-  include/linux/export.h \
-    $(wildcard include/config/modversions.h) \
-    $(wildcard include/config/module/rel/crcs.h) \
-    $(wildcard include/config/have/arch/prel32/relocations.h) \
-    $(wildcard include/config/trim/unused/ksyms.h) \
-  include/linux/compiler.h \
-    $(wildcard include/config/trace/branch/profiling.h) \
-    $(wildcard include/config/profile/all/branches.h) \
-    $(wildcard include/config/stack/validation.h) \
-    $(wildcard include/config/debug/entry.h) \
-  arch/x86/include/asm/barrier.h \
-  arch/x86/include/asm/alternative.h \
   arch/x86/include/asm/asm.h \
   arch/x86/include/asm/nops.h \
     $(wildcard include/config/mk7.h) \
@@ -106,6 +94,28 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/kcsan/ignore/atomics.h) \
   arch/x86/include/asm/linkage.h \
     $(wildcard include/config/x86/alignment/16.h) \
+  include/linux/wait_bit.h \
+  include/linux/wait.h \
+    $(wildcard include/config/lockdep.h) \
+  include/linux/list.h \
+    $(wildcard include/config/debug/list.h) \
+  include/linux/poison.h \
+    $(wildcard include/config/illegal/pointer/value.h) \
+    $(wildcard include/config/page/poisoning/zero.h) \
+  include/linux/const.h \
+  include/vdso/const.h \
+  include/uapi/linux/const.h \
+  include/linux/kernel.h \
+    $(wildcard include/config/preempt/voluntary.h) \
+    $(wildcard include/config/debug/atomic/sleep.h) \
+    $(wildcard include/config/preempt/rt.h) \
+    $(wildcard include/config/prove/locking.h) \
+    $(wildcard include/config/panic/timeout.h) \
+    $(wildcard include/config/tracing.h) \
+    $(wildcard include/config/ftrace/mcount/record.h) \
+  include/linux/limits.h \
+  include/uapi/linux/limits.h \
+  include/vdso/limits.h \
   include/linux/bitops.h \
   include/linux/bits.h \
   include/vdso/bits.h \
@@ -174,22 +184,14 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/x86/internode/cache/shift.h) \
     $(wildcard include/config/x86/vsmp.h) \
   include/linux/dynamic_debug.h \
+    $(wildcard include/config/jump/label.h) \
   include/linux/jump_label.h \
     $(wildcard include/config/have/arch/jump/label/relative.h) \
   arch/x86/include/asm/jump_label.h \
   arch/x86/include/asm/div64.h \
   include/asm-generic/div64.h \
-  include/linux/stat.h \
-  arch/x86/include/uapi/asm/stat.h \
-  include/uapi/linux/stat.h \
-  include/linux/time.h \
-    $(wildcard include/config/arch/uses/gettimeoffset.h) \
-    $(wildcard include/config/posix/timers.h) \
-  include/linux/seqlock.h \
-    $(wildcard include/config/debug/lock/alloc.h) \
   include/linux/spinlock.h \
     $(wildcard include/config/debug/spinlock.h) \
-    $(wildcard include/config/preemption.h) \
   include/linux/preempt.h \
     $(wildcard include/config/preempt/count.h) \
     $(wildcard include/config/debug/preempt.h) \
@@ -211,6 +213,7 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/have/arch/within/stack/frames.h) \
     $(wildcard include/config/hardened/usercopy.h) \
   include/linux/bug.h \
+    $(wildcard include/config/generic/bug.h) \
     $(wildcard include/config/bug/on/data/corruption.h) \
   arch/x86/include/asm/bug.h \
     $(wildcard include/config/debug/bugverbose.h) \
@@ -235,7 +238,6 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/vm86.h) \
     $(wildcard include/config/x86/iopl/ioperm.h) \
     $(wildcard include/config/frame/pointer.h) \
-    $(wildcard include/config/compat.h) \
     $(wildcard include/config/ia32/emulation.h) \
   arch/x86/include/asm/page.h \
   arch/x86/include/asm/page_types.h \
@@ -321,6 +323,7 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
   include/asm-generic/qrwlock_types.h \
   arch/x86/include/uapi/asm/sigcontext.h \
   arch/x86/include/asm/msr.h \
+    $(wildcard include/config/tracepoints.h) \
   arch/x86/include/asm/msr-index.h \
   arch/x86/include/asm/cpumask.h \
   include/linux/cpumask.h \
@@ -370,7 +373,6 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
   include/linux/lockdep.h \
     $(wildcard include/config/prove/raw/lock/nesting.h) \
     $(wildcard include/config/preempt/lock.h) \
-    $(wildcard include/config/lockdep.h) \
     $(wildcard include/config/lock/stat.h) \
   include/linux/rwlock_types.h \
   arch/x86/include/asm/spinlock.h \
@@ -411,6 +413,46 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/inline/write/unlock/irq.h) \
     $(wildcard include/config/inline/read/unlock/irqrestore.h) \
     $(wildcard include/config/inline/write/unlock/irqrestore.h) \
+  include/uapi/linux/wait.h \
+  include/linux/kdev_t.h \
+  include/uapi/linux/kdev_t.h \
+  include/linux/dcache.h \
+  include/linux/rculist.h \
+    $(wildcard include/config/prove/rcu/list.h) \
+  include/linux/rcupdate.h \
+    $(wildcard include/config/preempt/rcu.h) \
+    $(wildcard include/config/rcu/stall/common.h) \
+    $(wildcard include/config/no/hz/full.h) \
+    $(wildcard include/config/rcu/nocb/cpu.h) \
+    $(wildcard include/config/tasks/rcu/generic.h) \
+    $(wildcard include/config/tasks/rcu.h) \
+    $(wildcard include/config/tasks/rcu/trace.h) \
+    $(wildcard include/config/tasks/rude/rcu.h) \
+    $(wildcard include/config/tree/rcu.h) \
+    $(wildcard include/config/tiny/rcu.h) \
+    $(wildcard include/config/debug/objects/rcu/head.h) \
+    $(wildcard include/config/prove/rcu.h) \
+    $(wildcard include/config/rcu/boost.h) \
+    $(wildcard include/config/arch/weak/release/acquire.h) \
+  include/linux/rcutree.h \
+  include/linux/rculist_bl.h \
+  include/linux/list_bl.h \
+  include/linux/bit_spinlock.h \
+  include/linux/seqlock.h \
+  include/linux/lockref.h \
+    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
+  include/generated/bounds.h \
+  include/linux/stringhash.h \
+    $(wildcard include/config/dcache/word/access.h) \
+  include/linux/hash.h \
+    $(wildcard include/config/have/arch/hash.h) \
+  include/linux/path.h \
+  include/linux/stat.h \
+  arch/x86/include/uapi/asm/stat.h \
+  include/uapi/linux/stat.h \
+  include/linux/time.h \
+    $(wildcard include/config/arch/uses/gettimeoffset.h) \
+    $(wildcard include/config/posix/timers.h) \
   include/linux/time32.h \
   include/linux/timex.h \
   include/uapi/linux/timex.h \
@@ -428,14 +470,25 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/multiuser.h) \
     $(wildcard include/config/user/ns.h) \
   include/linux/highuid.h \
-  include/linux/kmod.h \
-  include/linux/umh.h \
-  include/linux/gfp.h \
+  include/linux/list_lru.h \
+    $(wildcard include/config/memcg/kmem.h) \
+  include/linux/nodemask.h \
     $(wildcard include/config/highmem.h) \
+    $(wildcard include/config/numa.h) \
+  include/linux/numa.h \
+    $(wildcard include/config/nodes/shift.h) \
+    $(wildcard include/config/numa/keep/meminfo.h) \
+  include/linux/shrinker.h \
+    $(wildcard include/config/memcg.h) \
+  include/linux/llist.h \
+    $(wildcard include/config/arch/have/nmi/safe/cmpxchg.h) \
+  include/linux/radix-tree.h \
+  include/linux/xarray.h \
+    $(wildcard include/config/xarray/multi.h) \
+  include/linux/gfp.h \
     $(wildcard include/config/zone/dma.h) \
     $(wildcard include/config/zone/dma32.h) \
     $(wildcard include/config/zone/device.h) \
-    $(wildcard include/config/numa.h) \
     $(wildcard include/config/pm/sleep.h) \
     $(wildcard include/config/contig/alloc.h) \
     $(wildcard include/config/cma.h) \
@@ -447,7 +500,6 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/memory/isolation.h) \
     $(wildcard include/config/shadow/call/stack.h) \
     $(wildcard include/config/zsmalloc.h) \
-    $(wildcard include/config/memcg.h) \
     $(wildcard include/config/memory/hotplug.h) \
     $(wildcard include/config/compaction.h) \
     $(wildcard include/config/transparent/hugepage.h) \
@@ -462,19 +514,12 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/have/arch/pfn/valid.h) \
     $(wildcard include/config/holes/in/zone.h) \
     $(wildcard include/config/arch/has/holes/memorymodel.h) \
-  include/linux/wait.h \
-  include/uapi/linux/wait.h \
-  include/linux/numa.h \
-    $(wildcard include/config/nodes/shift.h) \
-    $(wildcard include/config/numa/keep/meminfo.h) \
-  include/linux/nodemask.h \
   include/linux/pageblock-flags.h \
     $(wildcard include/config/hugetlb/page.h) \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/linux/page-flags-layout.h \
     $(wildcard include/config/numa/balancing.h) \
     $(wildcard include/config/kasan/sw/tags.h) \
-  include/generated/bounds.h \
   include/linux/mm_types.h \
     $(wildcard include/config/have/aligned/struct/page.h) \
     $(wildcard include/config/userfaultfd.h) \
@@ -492,22 +537,6 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
   include/uapi/linux/auxvec.h \
   arch/x86/include/uapi/asm/auxvec.h \
   include/linux/rbtree.h \
-  include/linux/rcupdate.h \
-    $(wildcard include/config/preempt/rcu.h) \
-    $(wildcard include/config/rcu/stall/common.h) \
-    $(wildcard include/config/no/hz/full.h) \
-    $(wildcard include/config/rcu/nocb/cpu.h) \
-    $(wildcard include/config/tasks/rcu/generic.h) \
-    $(wildcard include/config/tasks/rcu.h) \
-    $(wildcard include/config/tasks/rcu/trace.h) \
-    $(wildcard include/config/tasks/rude/rcu.h) \
-    $(wildcard include/config/tree/rcu.h) \
-    $(wildcard include/config/tiny/rcu.h) \
-    $(wildcard include/config/debug/objects/rcu/head.h) \
-    $(wildcard include/config/prove/rcu.h) \
-    $(wildcard include/config/rcu/boost.h) \
-    $(wildcard include/config/arch/weak/release/acquire.h) \
-  include/linux/rcutree.h \
   include/linux/rwsem.h \
     $(wildcard include/config/rwsem/spin/on/owner.h) \
     $(wildcard include/config/debug/rwsems.h) \
@@ -518,6 +547,7 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/uprobes.h) \
   arch/x86/include/asm/uprobes.h \
   include/linux/notifier.h \
+    $(wildcard include/config/tree/srcu.h) \
   include/linux/mutex.h \
     $(wildcard include/config/mutex/spin/on/owner.h) \
     $(wildcard include/config/debug/mutexes.h) \
@@ -614,89 +644,9 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
   include/linux/smp.h \
     $(wildcard include/config/up/late/init.h) \
   include/linux/smp_types.h \
-  include/linux/llist.h \
-    $(wildcard include/config/arch/have/nmi/safe/cmpxchg.h) \
-  include/linux/sysctl.h \
-    $(wildcard include/config/sysctl.h) \
-  include/uapi/linux/sysctl.h \
-  include/linux/elf.h \
-    $(wildcard include/config/arch/use/gnu/property.h) \
-    $(wildcard include/config/arch/have/elf/prot.h) \
-  arch/x86/include/asm/elf.h \
-    $(wildcard include/config/x86/x32/abi.h) \
-  arch/x86/include/asm/user.h \
-  arch/x86/include/asm/user_64.h \
-  arch/x86/include/asm/fsgsbase.h \
-  arch/x86/include/asm/vdso.h \
-    $(wildcard include/config/x86/x32.h) \
-  include/uapi/linux/elf.h \
-  include/uapi/linux/elf-em.h \
-  include/linux/kobject.h \
-    $(wildcard include/config/uevent/helper.h) \
-    $(wildcard include/config/debug/kobject/release.h) \
-  include/linux/sysfs.h \
-  include/linux/kernfs.h \
-    $(wildcard include/config/kernfs.h) \
-  include/linux/idr.h \
-  include/linux/radix-tree.h \
-  include/linux/xarray.h \
-    $(wildcard include/config/xarray/multi.h) \
   include/linux/kconfig.h \
-  include/linux/kobject_ns.h \
-  include/linux/kref.h \
-  include/linux/refcount.h \
-  include/linux/moduleparam.h \
-    $(wildcard include/config/alpha.h) \
-    $(wildcard include/config/ia64.h) \
-    $(wildcard include/config/ppc64.h) \
-  include/linux/rbtree_latch.h \
-  include/linux/error-injection.h \
-  include/asm-generic/error-injection.h \
-  arch/x86/include/asm/module.h \
-    $(wildcard include/config/unwinder/orc.h) \
-  include/asm-generic/module.h \
-    $(wildcard include/config/have/mod/arch/specific.h) \
-    $(wildcard include/config/modules/use/elf/rel.h) \
-    $(wildcard include/config/modules/use/elf/rela.h) \
-  arch/x86/include/asm/orc_types.h \
-  include/linux/fs.h \
-    $(wildcard include/config/read/only/thp/for/fs.h) \
-    $(wildcard include/config/fs/posix/acl.h) \
-    $(wildcard include/config/security.h) \
-    $(wildcard include/config/cgroup/writeback.h) \
-    $(wildcard include/config/ima.h) \
-    $(wildcard include/config/file/locking.h) \
-    $(wildcard include/config/fsnotify.h) \
-    $(wildcard include/config/fs/encryption.h) \
-    $(wildcard include/config/fs/verity.h) \
-    $(wildcard include/config/epoll.h) \
-    $(wildcard include/config/quota.h) \
-    $(wildcard include/config/blk/dev/loop.h) \
-    $(wildcard include/config/fs/dax.h) \
-    $(wildcard include/config/block.h) \
-    $(wildcard include/config/mandatory/file/locking.h) \
-    $(wildcard include/config/migration.h) \
-    $(wildcard include/config/io/uring.h) \
-  include/linux/wait_bit.h \
-  include/linux/kdev_t.h \
-  include/uapi/linux/kdev_t.h \
-  include/linux/dcache.h \
-  include/linux/rculist.h \
-    $(wildcard include/config/prove/rcu/list.h) \
-  include/linux/rculist_bl.h \
-  include/linux/list_bl.h \
-  include/linux/bit_spinlock.h \
-  include/linux/lockref.h \
-    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
-  include/linux/stringhash.h \
-    $(wildcard include/config/dcache/word/access.h) \
-  include/linux/hash.h \
-    $(wildcard include/config/have/arch/hash.h) \
-  include/linux/path.h \
-  include/linux/list_lru.h \
-    $(wildcard include/config/memcg/kmem.h) \
-  include/linux/shrinker.h \
   include/linux/pid.h \
+  include/linux/refcount.h \
   include/linux/capability.h \
   include/uapi/linux/capability.h \
   include/linux/semaphore.h \
@@ -761,6 +711,7 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/kcov.h) \
     $(wildcard include/config/bcache.h) \
     $(wildcard include/config/vmap/stack.h) \
+    $(wildcard include/config/livepatch.h) \
     $(wildcard include/config/gcc/plugin/stackleak.h) \
     $(wildcard include/config/x86/mce.h) \
     $(wildcard include/config/arch/task/struct/on/stack.h) \
@@ -838,6 +789,9 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
   include/linux/key.h \
     $(wildcard include/config/key/notifications.h) \
     $(wildcard include/config/net.h) \
+    $(wildcard include/config/sysctl.h) \
+  include/linux/sysctl.h \
+  include/uapi/linux/sysctl.h \
   include/linux/assoc_array.h \
     $(wildcard include/config/associative/array.h) \
   include/linux/sched/user.h \
@@ -867,6 +821,15 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
   include/uapi/linux/quota.h \
   include/linux/nfs_fs_i.h \
   include/linux/cdev.h \
+  include/linux/kobject.h \
+    $(wildcard include/config/uevent/helper.h) \
+    $(wildcard include/config/debug/kobject/release.h) \
+  include/linux/sysfs.h \
+  include/linux/kernfs.h \
+    $(wildcard include/config/kernfs.h) \
+  include/linux/idr.h \
+  include/linux/kobject_ns.h \
+  include/linux/kref.h \
   include/linux/device.h \
     $(wildcard include/config/debug/devres.h) \
     $(wildcard include/config/generic/msi/irq/domain.h) \
@@ -896,107 +859,6 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
   arch/x86/include/asm/device.h \
     $(wildcard include/config/iommu/api.h) \
   include/linux/pm_wakeup.h \
-  include/linux/kprobes.h \
-    $(wildcard include/config/kretprobes.h) \
-    $(wildcard include/config/kprobes/sanity/test.h) \
-    $(wildcard include/config/optprobes.h) \
-    $(wildcard include/config/kprobes/on/ftrace.h) \
-  include/linux/ftrace.h \
-    $(wildcard include/config/function/tracer.h) \
-    $(wildcard include/config/dynamic/ftrace.h) \
-    $(wildcard include/config/dynamic/ftrace/with/regs.h) \
-    $(wildcard include/config/dynamic/ftrace/with/direct/calls.h) \
-    $(wildcard include/config/have/dynamic/ftrace/with/direct/calls.h) \
-    $(wildcard include/config/stack/tracer.h) \
-    $(wildcard include/config/function/profiler.h) \
-    $(wildcard include/config/ftrace/syscalls.h) \
-  include/linux/trace_clock.h \
-  arch/x86/include/asm/trace_clock.h \
-  include/linux/kallsyms.h \
-    $(wildcard include/config/kallsyms/all.h) \
-  include/linux/mm.h \
-    $(wildcard include/config/have/arch/mmap/rnd/bits.h) \
-    $(wildcard include/config/have/arch/mmap/rnd/compat/bits.h) \
-    $(wildcard include/config/arch/uses/high/vma/flags.h) \
-    $(wildcard include/config/arch/has/pkeys.h) \
-    $(wildcard include/config/ppc.h) \
-    $(wildcard include/config/parisc.h) \
-    $(wildcard include/config/sparc64.h) \
-    $(wildcard include/config/shmem.h) \
-    $(wildcard include/config/dev/pagemap/ops.h) \
-    $(wildcard include/config/device/private.h) \
-    $(wildcard include/config/pci/p2pdma.h) \
-    $(wildcard include/config/arch/has/pte/special.h) \
-    $(wildcard include/config/arch/has/pte/devmap.h) \
-    $(wildcard include/config/debug/vm/rb.h) \
-    $(wildcard include/config/page/poisoning.h) \
-    $(wildcard include/config/init/on/alloc/default/on.h) \
-    $(wildcard include/config/init/on/free/default/on.h) \
-    $(wildcard include/config/debug/pagealloc.h) \
-    $(wildcard include/config/arch/has/set/direct/map.h) \
-    $(wildcard include/config/hibernation.h) \
-    $(wildcard include/config/hugetlbfs.h) \
-    $(wildcard include/config/mapping/dirty/helpers.h) \
-  include/linux/mmap_lock.h \
-  include/linux/percpu-refcount.h \
-  include/linux/page_ext.h \
-  include/linux/stacktrace.h \
-    $(wildcard include/config/stacktrace.h) \
-    $(wildcard include/config/arch/stackwalk.h) \
-    $(wildcard include/config/have/reliable/stacktrace.h) \
-  include/linux/stackdepot.h \
-  include/linux/page_ref.h \
-    $(wildcard include/config/debug/page/ref.h) \
-  include/linux/memremap.h \
-  include/linux/sizes.h \
-  include/linux/pgtable.h \
-    $(wildcard include/config/highpte.h) \
-    $(wildcard include/config/have/arch/transparent/hugepage/pud.h) \
-    $(wildcard include/config/have/arch/soft/dirty.h) \
-    $(wildcard include/config/arch/enable/thp/migration.h) \
-    $(wildcard include/config/have/arch/huge/vmap.h) \
-    $(wildcard include/config/x86/espfix64.h) \
-  arch/x86/include/asm/pgtable.h \
-    $(wildcard include/config/debug/wx.h) \
-  arch/x86/include/asm/fpu/xstate.h \
-  arch/x86/include/asm/fpu/api.h \
-    $(wildcard include/config/x86/debug/fpu.h) \
-  include/asm-generic/pgtable_uffd.h \
-  arch/x86/include/asm/pgtable_64.h \
-  arch/x86/include/asm/pgtable-invert.h \
-  include/linux/huge_mm.h \
-  include/linux/sched/coredump.h \
-    $(wildcard include/config/core/dump/default/elf/headers.h) \
-  include/linux/vmstat.h \
-    $(wildcard include/config/vm/event/counters.h) \
-    $(wildcard include/config/debug/tlbflush.h) \
-    $(wildcard include/config/debug/vm/vmacache.h) \
-  include/linux/vm_event_item.h \
-    $(wildcard include/config/memory/balloon.h) \
-    $(wildcard include/config/balloon/compaction.h) \
-  arch/x86/include/asm/sections.h \
-  include/asm-generic/sections.h \
-  include/linux/ptrace.h \
-  include/linux/pid_namespace.h \
-    $(wildcard include/config/pid/ns.h) \
-  include/linux/nsproxy.h \
-  include/linux/ns_common.h \
-  include/uapi/linux/ptrace.h \
-  arch/x86/include/asm/ftrace.h \
-  include/linux/compat.h \
-    $(wildcard include/config/arch/has/syscall/wrapper.h) \
-    $(wildcard include/config/compat/old/sigaction.h) \
-    $(wildcard include/config/odd/rt/sigaction.h) \
-  include/linux/socket.h \
-  arch/x86/include/generated/uapi/asm/socket.h \
-  include/uapi/asm-generic/socket.h \
-  arch/x86/include/generated/uapi/asm/sockios.h \
-  include/uapi/asm-generic/sockios.h \
-  include/uapi/linux/sockios.h \
-  include/linux/uio.h \
-  include/crypto/hash.h \
-  include/linux/crypto.h \
-    $(wildcard include/config/crypto/stats.h) \
   include/linux/slab.h \
     $(wildcard include/config/debug/slab.h) \
     $(wildcard include/config/failslab.h) \
@@ -1004,181 +866,17 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/slab.h) \
     $(wildcard include/config/slub.h) \
     $(wildcard include/config/slob.h) \
+  include/linux/percpu-refcount.h \
   include/linux/kasan.h \
     $(wildcard include/config/kasan/vmalloc.h) \
     $(wildcard include/config/kasan/generic.h) \
     $(wildcard include/config/kasan/inline.h) \
-  include/uapi/linux/uio.h \
-  include/uapi/linux/socket.h \
-  include/uapi/linux/if.h \
-  include/uapi/linux/libc-compat.h \
-  include/uapi/linux/hdlc/ioctl.h \
-  include/uapi/linux/aio_abi.h \
-  arch/x86/include/asm/compat.h \
-  include/linux/sched/task_stack.h \
-    $(wildcard include/config/debug/stack/usage.h) \
-  include/uapi/linux/magic.h \
-  arch/x86/include/asm/user32.h \
-  include/asm-generic/compat.h \
-  arch/x86/include/asm/syscall_wrapper.h \
-  arch/x86/include/asm/kprobes.h \
-  include/asm-generic/kprobes.h \
-  arch/x86/include/asm/text-patching.h \
-    $(wildcard include/config/uml/x86.h) \
-  arch/x86/include/asm/insn.h \
-  arch/x86/include/asm/inat.h \
-  arch/x86/include/asm/inat_types.h \
-  include/generated/uapi/linux/version.h \
-  include/linux/interrupt.h \
-    $(wildcard include/config/irq/forced/threading.h) \
-    $(wildcard include/config/generic/irq/probe.h) \
-    $(wildcard include/config/irq/timings.h) \
-  include/linux/irqreturn.h \
-  include/linux/irqnr.h \
-  include/uapi/linux/irqnr.h \
-  include/linux/hardirq.h \
-  include/linux/context_tracking_state.h \
-    $(wildcard include/config/context/tracking.h) \
-  include/linux/ftrace_irq.h \
-    $(wildcard include/config/hwlat/tracer.h) \
-  include/linux/vtime.h \
-    $(wildcard include/config/virt/cpu/accounting.h) \
-    $(wildcard include/config/irq/time/accounting.h) \
-  arch/x86/include/asm/irq.h \
-  include/linux/vmalloc.h \
-  arch/x86/include/asm/vmalloc.h \
-  arch/x86/include/asm/pgtable_areas.h \
-  arch/x86/include/asm/io.h \
-    $(wildcard include/config/mtrr.h) \
-    $(wildcard include/config/x86/pat.h) \
-  arch/x86/include/generated/asm/early_ioremap.h \
-  include/asm-generic/early_ioremap.h \
-    $(wildcard include/config/generic/early/ioremap.h) \
-  include/asm-generic/iomap.h \
-    $(wildcard include/config/has/ioport/map.h) \
-    $(wildcard include/config/pci.h) \
-    $(wildcard include/config/generic/iomap.h) \
-  include/asm-generic/pci_iomap.h \
-    $(wildcard include/config/no/generic/pci/ioport/map.h) \
-    $(wildcard include/config/generic/pci/iomap.h) \
-  include/asm-generic/io.h \
-    $(wildcard include/config/generic/ioremap.h) \
-    $(wildcard include/config/virt/to/bus.h) \
-  include/linux/logic_pio.h \
-    $(wildcard include/config/indirect/pio.h) \
-  include/linux/fwnode.h \
-  arch/x86/include/asm/cacheflush.h \
-  include/asm-generic/cacheflush.h \
-  include/linux/syscalls.h \
-    $(wildcard include/config/clone/backwards.h) \
-    $(wildcard include/config/clone/backwards3.h) \
-    $(wildcard include/config/old/sigsuspend.h) \
-    $(wildcard include/config/old/sigsuspend3.h) \
-    $(wildcard include/config/advise/syscalls.h) \
-  include/trace/syscall.h \
-    $(wildcard include/config/have/syscall/tracepoints.h) \
-  include/linux/tracepoint.h \
-    $(wildcard include/config/tracepoint.h) \
-  include/linux/trace_events.h \
-    $(wildcard include/config/kprobe/events.h) \
-    $(wildcard include/config/uprobe/events.h) \
-  include/linux/ring_buffer.h \
-    $(wildcard include/config/ring/buffer/allow/swap.h) \
-    $(wildcard include/config/ring/buffer.h) \
-  include/linux/seq_file.h \
-  include/linux/poll.h \
-  include/uapi/linux/poll.h \
-  arch/x86/include/generated/uapi/asm/poll.h \
-  include/uapi/asm-generic/poll.h \
-  include/uapi/linux/eventpoll.h \
-  include/linux/trace_seq.h \
-  include/linux/seq_buf.h \
-  include/linux/perf_event.h \
-    $(wildcard include/config/have/hw/breakpoint.h) \
-    $(wildcard include/config/cgroup/perf.h) \
-    $(wildcard include/config/cpu/sup/intel.h) \
-  include/uapi/linux/perf_event.h \
-  include/uapi/linux/bpf_perf_event.h \
-  arch/x86/include/generated/uapi/asm/bpf_perf_event.h \
-  include/uapi/asm-generic/bpf_perf_event.h \
-  arch/x86/include/asm/perf_event.h \
-  arch/x86/include/asm/stacktrace.h \
-  arch/x86/include/asm/cpu_entry_area.h \
-  arch/x86/include/asm/intel_ds.h \
-  arch/x86/include/asm/switch_to.h \
-  arch/x86/include/generated/asm/local64.h \
-  include/asm-generic/local64.h \
-  arch/x86/include/asm/local.h \
-  arch/x86/include/asm/hw_breakpoint.h \
-  arch/x86/include/uapi/asm/hw_breakpoint.h \
-  include/linux/kdebug.h \
-  arch/x86/include/asm/kdebug.h \
-  include/linux/cpu.h \
-    $(wildcard include/config/pm/sleep/smp.h) \
-    $(wildcard include/config/pm/sleep/smp/nonzero/cpu.h) \
-    $(wildcard include/config/hotplug/smt.h) \
-  include/linux/node.h \
-    $(wildcard include/config/hmem/reporting.h) \
-    $(wildcard include/config/memory/hotplug/sparse.h) \
-  include/linux/cpuhotplug.h \
-  include/linux/irq_work.h \
-    $(wildcard include/config/irq/work.h) \
-  arch/x86/include/asm/irq_work.h \
-  include/linux/jump_label_ratelimit.h \
-  include/linux/perf_regs.h \
-    $(wildcard include/config/have/perf/regs.h) \
-  arch/x86/include/uapi/asm/perf_regs.h \
-  include/linux/cgroup.h \
-    $(wildcard include/config/cgroup/cpuacct.h) \
-    $(wildcard include/config/sock/cgroup/data.h) \
-    $(wildcard include/config/cgroup/net/prio.h) \
-    $(wildcard include/config/cgroup/net/classid.h) \
-    $(wildcard include/config/cgroup/data.h) \
-    $(wildcard include/config/cgroup/bpf.h) \
-  include/uapi/linux/cgroupstats.h \
-  include/uapi/linux/taskstats.h \
-  include/linux/user_namespace.h \
-    $(wildcard include/config/inotify/user.h) \
-    $(wildcard include/config/persistent/keyrings.h) \
-  include/linux/kernel_stat.h \
-  include/linux/cgroup-defs.h \
-  include/linux/u64_stats_sync.h \
-  include/linux/bpf-cgroup.h \
-  include/linux/bpf.h \
-    $(wildcard include/config/bpf/jit.h) \
-    $(wildcard include/config/bpf/jit/always/on.h) \
-    $(wildcard include/config/bpf/stream/parser.h) \
-    $(wildcard include/config/inet.h) \
-  include/uapi/linux/bpf.h \
-    $(wildcard include/config/efficient/unaligned/access.h) \
-    $(wildcard include/config/ip/route/classid.h) \
-    $(wildcard include/config/bpf/kprobe/override.h) \
-    $(wildcard include/config/xfrm.h) \
-    $(wildcard include/config/bpf/lirc/mode2.h) \
-  include/uapi/linux/bpf_common.h \
-  include/linux/file.h \
-  include/linux/bpf_types.h \
-    $(wildcard include/config/bpf/lsm.h) \
-    $(wildcard include/config/xdp/sockets.h) \
-  include/linux/psi_types.h \
-  include/linux/kthread.h \
-  include/linux/cgroup_subsys.h \
-    $(wildcard include/config/cgroup/device.h) \
-    $(wildcard include/config/cgroup/freezer.h) \
-    $(wildcard include/config/cgroup/hugetlb.h) \
-    $(wildcard include/config/cgroup/pids.h) \
-    $(wildcard include/config/cgroup/rdma.h) \
-    $(wildcard include/config/cgroup/debug.h) \
-  include/linux/security.h \
-    $(wildcard include/config/security/selinux.h) \
-    $(wildcard include/config/security/smack.h) \
-    $(wildcard include/config/security/apparmor.h) \
-    $(wildcard include/config/security/network.h) \
-    $(wildcard include/config/security/infiniband.h) \
-    $(wildcard include/config/security/network/xfrm.h) \
-    $(wildcard include/config/security/path.h) \
-    $(wildcard include/config/securityfs.h) \
+  /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/../include/../include/parameters.h \
+  /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/../include/../include/structs.h \
+  /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/../include/../include/../include/bitmap.h \
+  /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/../include/../include/../include/parameters.h \
+  /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/../include/../include/rwlock.h \
 
-/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o: $(deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o)
+/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/device.o: $(deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/device.o)
 
-$(deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o):
+$(deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/device.o):

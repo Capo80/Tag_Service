@@ -1,8 +1,8 @@
-cmd_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := gcc -Wp,-MMD,/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/.vtpmo.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/10/include  -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -include ./include/linux/compiler_types.h -D__KERNEL__ -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -DCONFIG_X86_X32_ABI -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=1024 -fstack-protector-strong -Wimplicit-fallthrough -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -fmacro-prefix-map=./= -Wno-packed-not-aligned  -DMODULE  -DKBUILD_BASENAME='"vtpmo"' -DKBUILD_MODNAME='"tag_service"' -c -o /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.c
+cmd_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/usctm.o := gcc -Wp,-MMD,/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/.usctm.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/10/include  -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -include ./include/linux/compiler_types.h -D__KERNEL__ -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -DCONFIG_X86_X32_ABI -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=1024 -fstack-protector-strong -Wimplicit-fallthrough -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -fmacro-prefix-map=./= -Wno-packed-not-aligned  -DMODULE  -DKBUILD_BASENAME='"usctm"' -DKBUILD_MODNAME='"tag_service"' -c -o /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/usctm.o /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/usctm.c
 
-source_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.c
+source_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/usctm.o := /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/usctm.c
 
-deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
+deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/usctm.o := \
   include/linux/kconfig.h \
     $(wildcard include/config/cc/version/text.h) \
     $(wildcard include/config/cpu/big/endian.h) \
@@ -1048,25 +1048,6 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
   include/linux/vmalloc.h \
   arch/x86/include/asm/vmalloc.h \
   arch/x86/include/asm/pgtable_areas.h \
-  arch/x86/include/asm/io.h \
-    $(wildcard include/config/mtrr.h) \
-    $(wildcard include/config/x86/pat.h) \
-  arch/x86/include/generated/asm/early_ioremap.h \
-  include/asm-generic/early_ioremap.h \
-    $(wildcard include/config/generic/early/ioremap.h) \
-  include/asm-generic/iomap.h \
-    $(wildcard include/config/has/ioport/map.h) \
-    $(wildcard include/config/pci.h) \
-    $(wildcard include/config/generic/iomap.h) \
-  include/asm-generic/pci_iomap.h \
-    $(wildcard include/config/no/generic/pci/ioport/map.h) \
-    $(wildcard include/config/generic/pci/iomap.h) \
-  include/asm-generic/io.h \
-    $(wildcard include/config/generic/ioremap.h) \
-    $(wildcard include/config/virt/to/bus.h) \
-  include/linux/logic_pio.h \
-    $(wildcard include/config/indirect/pio.h) \
-  include/linux/fwnode.h \
   arch/x86/include/asm/cacheflush.h \
   include/asm-generic/cacheflush.h \
   include/linux/syscalls.h \
@@ -1178,7 +1159,8 @@ deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o := \
     $(wildcard include/config/security/network/xfrm.h) \
     $(wildcard include/config/security/path.h) \
     $(wildcard include/config/securityfs.h) \
+  /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/../include/vtpmo.h \
 
-/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o: $(deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o)
+/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/usctm.o: $(deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/usctm.o)
 
-$(deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/vtpmo.o):
+$(deps_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/./lib/usctm.o):

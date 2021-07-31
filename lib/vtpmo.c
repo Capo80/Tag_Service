@@ -31,6 +31,7 @@
 #include <linux/string.h>
 #include <linux/vmalloc.h>
 #include <asm/page.h>
+#include <asm/io.h>
 #include <asm/cacheflush.h>
 #include <asm/apic.h>
 #include <linux/syscalls.h>

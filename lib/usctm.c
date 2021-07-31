@@ -40,7 +40,7 @@
 #include <asm/cacheflush.h>
 #include <asm/apic.h>
 #include <linux/syscalls.h>
-#include "./include/vtpmo.h"
+#include "../include/vtpmo.h"
 
 
 MODULE_LICENSE("GPL");
@@ -70,13 +70,13 @@ extern int sys_vtpmo(unsigned long vaddr);
 #define ENTRIES_TO_EXPLORE 256
 
 
-unsigned long *hacked_ni_syscall=NULL;
-unsigned long **hacked_syscall_tbl=NULL;
+extern unsigned long *hacked_ni_syscall;
+extern unsigned long **hacked_syscall_tbl;
 
-unsigned long sys_call_table_address = 0x0;
+extern unsigned long sys_call_table_address;
 module_param(sys_call_table_address, ulong, 0660);
 
-unsigned long sys_ni_syscall_address = 0x0;
+extern unsigned long sys_ni_syscall_address;
 module_param(sys_ni_syscall_address, ulong, 0660);
 
 
@@ -138,7 +138,7 @@ int validate_page(unsigned long *addr){
 }
 
 /* This routines looks for the syscall table.  */
-void syscall_table_finder(void){
+void syscall_table_finder(void) {
 	unsigned long k; // current page
 	unsigned long candidate; // current page
 
@@ -151,10 +151,12 @@ void syscall_table_finder(void){
 			if(validate_page( (unsigned long *)(candidate)) ){
 				printk("%s: syscall table found at %px\n",MODNAME,(void*)(hacked_syscall_tbl));
 				printk("%s: sys_ni_syscall found at %px\n",MODNAME,(void*)(hacked_ni_syscall));
+				
 				break;
 			}
 		}
 	}
+
 	
 }
 
@@ -163,102 +165,3 @@ void syscall_table_finder(void){
 int free_entries[MAX_FREE];
 module_param_array(free_entries,int,NULL,0660);//default array size already known - here we expose what entries are free
 
-
-#define SYS_CALL_INSTALL
-
-#ifdef SYS_CALL_INSTALL
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,17,0)
-__SYSCALL_DEFINEx(2, _trial, unsigned long, A, unsigned long, B){
-#else
-asmlinkage long sys_trial(unsigned long A, unsigned long B){
-#endif
-
-        printk("%s: thread %d requests a trial sys_call with %lu and %lu as parameters\n",MODNAME,current->pid,A,B);
-
-        return 0;
-
-}
-
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,17,0)
-static unsigned long sys_trial = (unsigned long) __x64_sys_trial;	
-#else
-#endif
-
-unsigned long cr0;
-
-static inline void
-write_cr0_forced(unsigned long val)
-{
-    unsigned long __force_order;
-
-    /* __asm__ __volatile__( */
-    asm volatile(
-        "mov %0, %%cr0"
-        : "+r"(val), "+m"(__force_order));
-}
-
-static inline void
-protect_memory(void)
-{
-    write_cr0_forced(cr0);
-}
-
-static inline void
-unprotect_memory(void)
-{
-    write_cr0_forced(cr0 & ~X86_CR0_WP);
-}
-
-#else
-#endif
-
-
-
-int init_module(void) {
-	
-	int i,j;
-		
-        printk("%s: initializing\n",MODNAME);
-	
-	syscall_table_finder();
-
-	if(!hacked_syscall_tbl){
-		printk("%s: failed to find the sys_call_table\n",MODNAME);
-		return -1;
-	}
-
-	j=0;
-	for(i=0;i<ENTRIES_TO_EXPLORE;i++)
-		if(hacked_syscall_tbl[i] == hacked_ni_syscall){
-			printk("%s: found sys_ni_syscall entry at syscall_table[%d]\n",MODNAME,i);	
-			free_entries[j++] = i;
-			if(j>=MAX_FREE) break;
-		}
-
-#ifdef SYS_CALL_INSTALL
-	cr0 = read_cr0();
-        unprotect_memory();
-        hacked_syscall_tbl[FIRST_NI_SYSCALL] = (unsigned long*)sys_trial;
-        protect_memory();
-	printk("%s: a sys_call with 2 parameters has been installed as a trial on the sys_call_table at displacement %d\n",MODNAME,FIRST_NI_SYSCALL);	
-#else
-#endif
-
-        printk("%s: module correctly mounted\n",MODNAME);
-
-        return 0;
-
-}
-
-void cleanup_module(void) {
-                
-#ifdef SYS_CALL_INSTALL
-	cr0 = read_cr0();
-        unprotect_memory();
-        hacked_syscall_tbl[FIRST_NI_SYSCALL] = (unsigned long*)hacked_ni_syscall;
-        protect_memory();
-#else
-#endif
-        printk("%s: shutting down\n",MODNAME);
-        
-}

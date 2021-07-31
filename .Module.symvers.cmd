@@ -1,0 +1,1 @@
+cmd_/home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/Module.symvers := sed 's/ko$$/o/' /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/modules.order | scripts/mod/modpost -m -a   -o /home/capo80/Desktop/SOA/Progetto_SOA/Tag_Service/Module.symvers -e -i Module.symvers   -T -
