@@ -24,7 +24,7 @@ descriptor_info* get_descriptor_info(td_hash_table* table, int pid) {
     td_hash_table* temp = table;
 
     AUDIT
-    printk("%s: aaa searching for %d, table index: %d\n", MODNAME, pid, table_index);
+    printk("%s: searching for %d, table index: %d\n", MODNAME, pid, table_index);
 
     while (temp != NULL) {
         if (temp->table != NULL && temp->table[table_index] != NULL && temp->table[table_index]->real_pid == pid)
@@ -106,7 +106,6 @@ int add_new_descriptor(descriptor_info* info, unsigned char real_index, short ve
     // array of descriptors is full, make it bigger
     if (i == info->curr_alloc) {
 
-        //TODO function for this
         char* new_array = kmalloc(info->curr_alloc+DESCRIPTOR_BATCH, GFP_KERNEL);
         short* new_version_array = kmalloc(sizeof(short)*(info->curr_alloc+DESCRIPTOR_BATCH), GFP_KERNEL);
         memcpy(new_array, info->descriptors, info->curr_alloc);
@@ -143,8 +142,7 @@ int get_new_descriptor(td_hash_table* td_table, unsigned char real_index, short 
     AUDIT
     printk("%s: got pid %d, position %d\n", MODNAME, current_pid, ((int)current_pid) % HASH_TABLE_SIZE);        
 
-    //this will always exit, at the worst case we are allocating a new table
-    
+    //this will always exit, at the worst case we are allocating a new table 
     while(true) {
         my_info = td_table->table[((int)current_pid) % HASH_TABLE_SIZE];
 

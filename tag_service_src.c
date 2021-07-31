@@ -26,6 +26,7 @@ DECLARE_WAIT_QUEUE_HEAD(insert_wq);
 
 // ###### helpers ################
 
+//functions that deletes old tags
 void recycle(ktime_t test_time) {
     int i;
     for(i = 0; i < TAGS_MAX; i++) {
@@ -52,7 +53,6 @@ int check_key(int key) {
 // The tag_get syscall check if the parameters are correct
 // Then tries to find a tag to open if need or return an existing one if it is already open
 // After finding the correct tag it attachs a descriptor and return it to the user
-
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4,17,0)
 __SYSCALL_DEFINEx(3, _tag_get, int, key, int, command, int, permission){
 #else
@@ -101,15 +101,10 @@ asmlinkage int sys_tag_get(int key, int command, int permission) {
     AUDIT
     printk("%s: called tag_get, key does not exist\n",MODNAME); 
 
-    AUDIT
-    print_list(insert_list);
-
     //coordinate with other creation threads
     //check if another is inserting, if it is wait of him to finish
     mutex_lock_interruptible(&insert_mutex);
 
-    AUDIT
-    printk("%s: searching key\n", MODNAME);
 
     my_key = find_key(insert_list, key); 
     if (my_key == NULL) {
@@ -202,11 +197,15 @@ asmlinkage int sys_tag_get(int key, int command, int permission) {
 
 }
 
+
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4,17,0)
 static unsigned long sys_tag_get = (unsigned long) __x64_sys_tag_get;	
 #else
 #endif
 
+
+//tag send syscall, check if the parameters are correct, find the tag associated with the descriptor
+//then change epochs and to a write on the past epoch
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4,17,0)
 __SYSCALL_DEFINEx(4, _tag_send, int, tag, int, level, char*, buffer, size_t, size){
 #else
@@ -245,6 +244,8 @@ static unsigned long sys_tag_send = (unsigned long) __x64_sys_tag_send;
 #else
 #endif
 
+//tag receive syscall, check if the parameters are correct, find the tag associated with the descriptor
+//then save the epoch and wait for a write on it
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4,17,0)
 __SYSCALL_DEFINEx(4, _tag_receive, int, tag, int, level, char*, buffer, size_t, size){
 #else
@@ -332,6 +333,9 @@ static unsigned long sys_tag_receive = (unsigned long) __x64_sys_tag_receive;
 #else
 #endif
 
+//tag ctl syscall, check if the parameters are correct
+//then either wake all thread by upadting the buffer or
+//remove the tag from the structure
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4,17,0)
 __SYSCALL_DEFINEx(2, _tag_ctl, int, tag, int, command){
 #else
@@ -379,60 +383,6 @@ asmlinkage int  sys_tag_ctl(int tag, int command) {
 static unsigned long sys_tag_ctl = (unsigned long) __x64_sys_tag_ctl;	
 #else
 #endif
-
-
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,17,0)
-__SYSCALL_DEFINEx(1, _audit, int, param){
-#else
-asmlinkage int sys_audit(int param) {
-#endif
-
-    int i, j;
-    // print tables
-    td_hash_table* temp = &tables;
-    while (temp != NULL) {
-        if (temp->table != NULL) {
-            for (i = 0; i < HASH_TABLE_SIZE; i++) {
-                printk("%s: pid %d", MODNAME, i);
-                if (temp->table[i] != NULL) {
-                    if (temp->table[i]->descriptors != NULL) {
-                        print_bitmap(temp->table[i]->descriptor_bitmap, temp->table[i]->curr_alloc);
-                        for (j = 0; j < temp->table[i]->curr_alloc; j++)
-                            printk("%s: desc %d, real index %d\n", MODNAME, j, temp->table[i]->descriptors[j]);
-                    }
-                }
-            }
-        }
-        temp = temp->next;
-    }
-
-    //print tags
-    for (i = 0; i < TAGS_MAX; i++) {
-        if (tag_array[i] != NULL) {
-            printk("%s: tag %d, key %d", MODNAME, i, key_array[i]);
-            //print levels
-            for (j = 0; j < LEVELS_MAX; j++){
-                    printk("%s: level %d, pointer: %p\n", MODNAME, j, tag_array[i]->priority_levels + j);
-                if (tag_array[i]->priority_levels[j] != NULL)
-                    printk("%s: level %d, number of threads in wait: %d\n", MODNAME, j, tag_array[i]->priority_levels[j]->reference_counter);
-
-            }
-        }
-
-    }
-
-    //printk("%s:\nbitmap: %d\n", MODNAME);
-
-    return 42;
-
-}
-
-
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,17,0)
-static unsigned long sys_audit = (unsigned long) __x64_sys_audit;   
-#else
-#endif
-
 
 // ########## helpers ########################
 
@@ -484,7 +434,6 @@ int init_module(void) {
     hacked_syscall_tbl[SECOND_NI_SYSCALL] = (unsigned long*) sys_tag_send;
     hacked_syscall_tbl[THIRD_NI_SYSCALL] = (unsigned long*) sys_tag_receive;
     hacked_syscall_tbl[FOURTH_NI_SYSCALL] = (unsigned long*) sys_tag_ctl;
-    hacked_syscall_tbl[FIFTH_NI_SYSCALL] = (unsigned long*) sys_audit;
     protect_memory();
     
     AUDIT
@@ -563,7 +512,6 @@ void cleanup_module(void) {
     hacked_syscall_tbl[SECOND_NI_SYSCALL] = (unsigned long*) hacked_syscall_tbl[SEVENTH_NI_SYSCALL];
     hacked_syscall_tbl[THIRD_NI_SYSCALL] = (unsigned long*) hacked_syscall_tbl[SEVENTH_NI_SYSCALL];
     hacked_syscall_tbl[FOURTH_NI_SYSCALL] = (unsigned long*) hacked_syscall_tbl[SEVENTH_NI_SYSCALL];
-    hacked_syscall_tbl[FIFTH_NI_SYSCALL] = (unsigned long*) hacked_syscall_tbl[SEVENTH_NI_SYSCALL];
     protect_memory();
     
     AUDIT
