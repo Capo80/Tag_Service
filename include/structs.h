@@ -22,18 +22,18 @@ struct key_node{
 /*
     The scruct tag contains information for the tag
     
-    @version: version of the tag, incremented at every open
     @private: 1 if it cannot be re-opened, 0 if it can
     @owner: uid of the owner (in case of private tag), INT_MAX if it does not have one
     @priority_levels: struct that keeps information on the levels
-    @bitmaps: bitmaps of the thread that are waiting for a message, one per level
     @reference_counter: number of threads on wait on the whole tag, used to prevent removals
+    @last_use: time of the last use of this tag, used to recycle old tags
 
     The struct level contains information for the level of a specific tag
     This strcture is swapped on epochs change
 
     @reference_counter: numeber of threads on wait on this level, used for writes
     @buffer: buffer to use when a message is passed
+    @size: size of the buffer
 */
 typedef struct {
 
@@ -54,13 +54,13 @@ typedef struct {
 
 /*
     hash table that keeps tracks of file descriptos.
-    The hash table maps pids to an array of file descriptor.
+    The hash table maps pids to an array of file descriptors.
     The table operates with key of max 512 pids, in case of collision a new table is allocated, every table is contained in 1 pages of 4Kb.
-    @descriptos: array of file descriptors, it uses the td of the thread as index and contains the real tag index in the least significant byte.
-    @descriptor_bitmap: indicates which descriptor are valid in in the array
-    @real_pid: contains the pid of the thread associated with the structures used to resolve collisions 
-    @curr_alloc: the number of descriptors that can be allocated wothuot making the structure bigger
-    @version: version of the tag, used to detect when a tag is closed
+    @descriptos: array of file descriptors, it uses the td of the thread as index and contains the real tag index
+    @descriptor_bitmap: indicates which descriptor are valid in the array
+    @real_pid: contains the pid of the thread associated with the structures, used to resolve collisions 
+    @curr_alloc: the number of descriptors that can be allocated wothuot making the array bigger
+    @versions: versions of the tag that associated with the descriptor, used to detect when a tag is closed
 */
 typedef struct {
 
