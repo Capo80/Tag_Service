@@ -21,4 +21,4 @@ make clean
 
 ## Tests
 
-To run the tests, install the modul, go into the user folder and run the file "run_test.sh" as a root user. Note that the root permissions are needed only for the "different_owner_test" and tests can be otherwire run with normal user permissions.
+To run the tests, install the module, go into the user folder and run the file "run_test.sh" as a root user. Note that the root permissions are needed only for the "different_owner_test" and tests can be otherwire run with normal user permissions.
