@@ -1,5 +1,5 @@
 # Tag_Service
-A linux kernel module that passes messages between processes, a project for the course of Advanced operating systems
+A linux kernel module that passes messages between processes, a project for the course of Advanced operating systems, a detailed description of the system (in italian) is included in the "Relazione SOA.pdf" file.
 
 ## Installation
 
